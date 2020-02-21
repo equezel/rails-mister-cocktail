@@ -6,7 +6,7 @@
     <ul>
       <% @cocktail.doses.each do |dose|  %>
       <li><%= dose.description %> <%= dose.ingredient.name %> |
-      <%= link_to '✗ Delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+      <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
     </li>
     <% end %>
     </ul>
@@ -20,5 +20,5 @@
 
     <% end %>
 
-    <%= link_to("Back to list", root_path, {class: "btn btn-primary"}) %>
+    <%= link_to("Back to list", root_path, {class: "btn btn-primary mt-3"}) %>
   </div>
